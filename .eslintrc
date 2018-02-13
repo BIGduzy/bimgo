@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb-lite",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "valid-jsdoc": 2,
+    "indent": [2, 4],
+  }
+}
