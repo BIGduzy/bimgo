@@ -1,0 +1,126 @@
+[
+    {
+        "id": 0,
+        "word": "Agile"
+    },
+    {
+        "id": 1,
+        "word": "SCRUM"
+    },
+    {
+        "id": 2,
+        "word": "CAFCR"
+    },
+    {
+        "id": 3,
+        "word": "Granulariteit"
+    },
+    {
+        "id": 4,
+        "word": "Analyse"
+    },
+    {
+        "id": 5,
+        "word": "Classificatie"
+    },
+    {
+        "id": 6,
+        "word": "Key drivers"
+    },
+    {
+        "id": 7,
+        "word": "Conceptualisatie"
+    },
+    {
+        "id": 8,
+        "word": "Alternatieven"
+    },
+    {
+        "id": 9,
+        "word": "Decompositie"
+    },
+    {
+        "id": 10,
+        "word": "Stakeholders"
+    },
+    {
+        "id": 11,
+        "word": "Budget"
+    },
+    {
+        "id": 12,
+        "word": "Concerns"
+    },
+    {
+        "id": 13,
+        "word": "Belangen Stakeholders"
+    },
+    {
+        "id": 14,
+        "word": "SWOT"
+    },
+    {
+        "id": 15,
+        "word": "\"Polygonale vorm\" + model"
+    },
+    {
+        "id": 16,
+        "word": "Het zit hem in de details"
+    },
+    {
+        "id": 17,
+        "word": "SMART"
+    },
+    {
+        "id": 18,
+        "word": "CAFCR"
+    },
+    {
+        "id": 19,
+        "word": "Literatuurstudie"
+    },
+    {
+        "id": 20,
+        "word": "Papers"
+    },
+    {
+        "id": 21,
+        "word": "Modeling"
+    },
+    {
+        "id": 22,
+        "word": "Architectuur"
+    },
+    {
+        "id": 23,
+        "word": "${word}"
+    },
+    {
+        "id": 24,
+        "word": "${word}"
+    },
+    {
+        "id": 25,
+        "word": "${word}"
+    },
+    {
+        "id": 26,
+        "word": "${word}"
+    },
+    {
+        "id": 27,
+        "word": "Engineer"
+    },
+    {
+        "id": 28,
+        "word": "Benchmarketing"
+    },
+    {
+        "id": 29,
+        "word": "Casus"
+    },
+    {
+        "id": 30,
+        "word": "Context"
+    }
+]
