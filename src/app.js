@@ -7,16 +7,15 @@ function main()  {
 
     // Get the buzzwords from the API
     getBuzzwords().then((result) => {
-        buzzwords = result;
-        console.log(buzzwords);
+		result = result.bimgo;
+		// Set the board
+		for (let i = 0; i < tiles.length; ++i) {
+			// TODO: Set text
+			tiles[i].querySelector('span').innerHTML = result[i].word;
+			tiles[i].setAttribute('buzzword-id', result[i].id);
+			tiles[i].addEventListener("click", onClick.bind(this, i, tiles[i]));
+		}
     });
-
-    // Set the board
-    for (let i = 0; i < tiles.length; ++i) {
-        // TODO: Set text
-        tiles[i].querySelector('span').innerHTML = '{Enter Buzzword here} ' + i*i*i*i*i*i*i*i*i;
-        tiles[i].addEventListener("click", onClick.bind(this, i, tiles[i]));
-    }
 }
 
 /**
@@ -90,7 +89,7 @@ function isBoardComplete() {
  */
 function getBuzzwords() {
     // TODO: Use correct url
-    return fetch('https://jsonplaceholder.typicode.com/posts/1').then(response => {
+    return fetch(`${API_URL}newBingo`).then(response => {
         // TODO: Check if API call was successfull
         return response.json();
     });
@@ -121,6 +120,7 @@ function sendVictory() {
 }
 
 (function() {
+	API_URL = `${window.location.protocol}//${window.location.hostname}:5000/bimgo/api/`;
     tiles = [];
 	main();
 })();
