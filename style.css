@@ -58,6 +58,7 @@ content #bingo-board .bingo-row .bingo-tile {
     align-items: center;
     padding: 0px 20px;
     overflow: hidden;
+	text-align: center;
 }
 
 content #bingo-board .bingo-row .bingo-tile[selected=true] {
