@@ -1,11 +1,13 @@
 // Homemade
 import reducer from 'Redux/Ducks';
+import clientMiddleware from 'Redux/Middleware/clientMiddleware';
+import ApiClient from 'Utils/ApiClient';
 
 // Node_modules
 import { applyMiddleware, createStore, compose } from 'redux';
 import thuk from 'redux-thunk';
 
-const middleware = applyMiddleware(thuk);
+const middleware = applyMiddleware(clientMiddleware(new ApiClient()), thuk);
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(

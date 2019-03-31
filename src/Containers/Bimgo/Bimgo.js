@@ -59,7 +59,7 @@ export default class Bimgo extends Component {
                     </ol>
                 </header>
                 <content>
-                    {bimgo.words.length > 0
+                    {bimgo.fetched > 0
                         ? <Board onComplete={this.handleComplete.bind(this)} words={bimgo.words} />
                         : <span>Loading bimgo board....</span>
                     }
