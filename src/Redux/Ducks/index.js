@@ -2,16 +2,12 @@
 import { combineReducers } from 'redux';
 
 // Homemade
-import bimgo from './Bimgo';
+import Bimgo from './Bimgo';
 
 export default combineReducers({
-    bimgo,
+    bimgo: Bimgo.reducer,
 });
 
-export const actions = {
-    bimgo: {
-        fetchAll: () => ({
-            type: 'BIMGO/GET_WORDS',
-        }),
-    },
+export const Actions = {
+    bimgo: Bimgo.actions,
 };

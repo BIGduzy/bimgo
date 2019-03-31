@@ -12,14 +12,15 @@ import { bindActionCreators } from 'redux';
     bimgo: store.bimgo,
 }), dispatch => ({
     actions: {
-        fetchWords: bindActionCreators(Actions.bimgo.fetchAll, dispatch),
+        fetchBoard: bindActionCreators(Actions.bimgo.fetchBoard, dispatch),
     },
 }))
 export default class Bimgo extends Component {
     // TODO: Create a file for overlapping proptype definitions
+    // TODO: Find out why arrayOf gives a warning
     static propTypes = {
         actions: PropTypes.objectOf(PropTypes.func).isRequired,
-        bimgo: PropTypes.object.shape({
+        bimgo: PropTypes.shape({
             words: PropTypes.arrayOf(
                 PropTypes.shape({
                     word: PropTypes.string.isRequired,
@@ -30,19 +31,19 @@ export default class Bimgo extends Component {
     }
 
     componentDidMount() {
-        this.fetchWords();
+        this.fetchBoard();
     }
 
-    fetchWords() {
+    fetchBoard() {
         const { actions } = this.props;
-        actions.fetchWords();
+        actions.fetchBoard();
     }
 
     handleComplete() {
         console.log('done!');
 
         // Get some new words d;)
-        this.fetchWords();
+        this.fetchBoard();
     }
 
     render() {

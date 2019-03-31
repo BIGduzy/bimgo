@@ -9,7 +9,7 @@ export default class Row extends Component {
     static propTypes = {
         onClick: PropTypes.func.isRequired,
         rowNumber: PropTypes.number.isRequired,
-        selected: PropTypes.objectOf(PropTypes.number).isRequired,
+        selected: PropTypes.objectOf(PropTypes.bool).isRequired,
         words: PropTypes.arrayOf(
             PropTypes.shape({
                 word: PropTypes.string.isRequired,
