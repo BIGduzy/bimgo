@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 
-container {
+#container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ content #bingo-board .bingo-row .bingo-tile {
 	text-align: center;
 }
 
-content #bingo-board .bingo-row .bingo-tile[selected=true] {
+content #bingo-board .bingo-row .selected {
     background-color: #50FF50;
 }
 

@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/client.js',
@@ -23,7 +24,11 @@ module.exports = {
         ],
         extensions: ['*', '.json', '.js', '.jsx'],
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     devServer: {
         contentBase: './dist',
+        hot: true
     },
 };
