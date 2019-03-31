@@ -1,15 +1,17 @@
 // Node modules
-import { default as React, Component, PropTypes } from 'react';
+import { default as React, Component } from 'react';
+import { PropTypes } from 'prop-types';
 
-export class Root extends Component {
-    // static propTypes = {
-    //     children: PropTypes.object.isRequired,
-    // }
+export default class Root extends Component {
+    static propTypes = {
+        children: PropTypes.element.isRequired,
+    }
 
     render() {
+        const { children } = this.props;
         return (
             <div id="container">
-                {this.props.children}
+                { children }
             </div>
         );
     }

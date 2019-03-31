@@ -2,7 +2,7 @@
 import { default as React, Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-export class Tile extends Component {
+export default class Tile extends Component {
     static propTypes = {
         id: PropTypes.number.isRequired,
         onClick: PropTypes.func.isRequired,
@@ -10,11 +10,11 @@ export class Tile extends Component {
         word: PropTypes.string.isRequired,
     }
 
-    constructor() {
-        super();
+    static defaultProps = {
+        selected: false,
     }
 
-    render(){
+    render() {
         const { id, onClick, selected, word } = this.props;
 
         return (
