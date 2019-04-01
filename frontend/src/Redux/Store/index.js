@@ -1,6 +1,6 @@
 // Homemade
 import reducer from 'Redux/Ducks';
-import clientMiddleware from 'Redux/Middleware/clientMiddleware';
+import clientMiddleware from 'Redux/Middleware/ClientMiddleware';
 import ApiClient from 'Utils/ApiClient';
 
 // Node_modules
