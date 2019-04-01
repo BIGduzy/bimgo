@@ -11,7 +11,7 @@ module.exports = Object.assign({
     host: process.env.HOST || 'localhost',
     port: process.env.PORT,
     api: {
-        url: process.env.APIURL || 'localhost:5000/bimgo/api',
+        url: process.env.APIURL || 'http://localhost:5000/bimgo/api',
         version: process.env.APIVERSION || '',
     },
     app: {

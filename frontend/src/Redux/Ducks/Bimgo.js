@@ -17,7 +17,7 @@ class Bimgo extends Model {
                 fetching: true,
             }),
             fetchBoard_success: (state, action) => ({
-                words: action.result,
+                words: action.result.bimgo,
                 fetched: true,
                 fetching: false,
             }),
@@ -32,7 +32,7 @@ class Bimgo extends Model {
         return function fetchBoard() {
             return {
                 types: [type.fetchBoard, type.fetchBoard_success, type.fetchBoard_failed],
-                promise: api => api.get('newBimgo'), // TODO: Better api design
+                promise: api => api.get('newBingo'), // TODO: Better api design
             };
         };
     }

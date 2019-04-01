@@ -9,29 +9,33 @@ function formatUrl(path) {
 }
 
 export default class ApiClient {
-    constructor(req) {
-        methods.forEach((method) =>
-        this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
-            console.log(path, formatUrl(path), method);
-            const request = superagent[method](formatUrl(path));
+    constructor() {
+        methods.forEach((method) => {
+            this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
+                const request = superagent[method](formatUrl(path));
+                // request.set('Accept', 'application/json');
+                // request.set('Access-Control-Allow-Origin', '*');
+                // request.set('Access-Control-Allow-Headers', '*');
 
-            if (params) {
-                request.query(params);
-            }
-
-            if (data) {
-                request.send(data);
-            }
-
-            request.end((err, res = {}) => {
-                if (err) {
-                    reject(res.body || err);
-                } else {
-                    resolve(res.body);
+                if (params) {
+                    request.query(params);
                 }
+
+                if (data) {
+                    request.send(data);
+                }
+
+                request.end((err, res = {}) => {
+                    if (err) {
+                        reject(res.body || err);
+                    } else {
+                        resolve(res.body);
+                    }
+                });
             });
-        }));
+        });
     }
+
     /*
     * There's a V8 bug where, when using Babel, exporting classes with only
     * constructors sometimes fails. Until it's patched, this is a solution to
@@ -42,5 +46,5 @@ export default class ApiClient {
     *
     * Remove it at your own risk.
     */
-    empty() {}
+    empty() {} /* eslint-disable-line class-methods-use-this */
 }

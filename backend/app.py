@@ -11,7 +11,8 @@ CORS(app)
 bimList = []
 
 def generateBingo():
-    return random.sample(bimList, 16)
+    random_words = random.sample(bimList, 16);
+    return [random_words[0:4], random_words[4:8], random_words[8:12], random_words[12:16]]
 
 @app.route('/bimgo/api/newBingo', methods=['GET'])
 def getNewBingo():
