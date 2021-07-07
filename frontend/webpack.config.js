@@ -5,8 +5,8 @@ module.exports = {
     entry: './src/client.js',
     output: {
         path: __dirname + '/dist',
-        publicPath: '/',
         filename: 'bundle.js',
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -29,6 +29,7 @@ module.exports = {
     ],
     devServer: {
         contentBase: './dist',
+        historyApiFallback: true,
         hot: true
     },
 };
